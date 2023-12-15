@@ -1,0 +1,71 @@
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+    background:#001f3e;
+    color:#fff;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .container h1 {
+    font-weight: 1000;
+  }
+  span {
+    color: #3498db; /* Change the color as needed */
+    border-bottom: 1px solid #3498db;
+  }
+  .display {
+    margin-top: 40px; 
+    margin-bottom: 20px;
+    position: relative;
+    background: #fff;
+    color: #333;
+    padding: 35px 20px;
+    border-radius: 5px;
+  }
+  
+  #password {
+    font-size: 20px;
+    margin-right: 200px;
+    border:0;
+    outline:0;
+  }
+  
+  .display img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  #button {
+    padding: 7px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  #button img{
+    width:18px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  
+
+  
+
+
+  

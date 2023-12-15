@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <title>Generate Random Password</title>
+</head>
+<body>
+    <Div class ="container">
+        <h1>Generate a <Span>Random Password</Span></h1>
+        <div class ="display">
+            <input type="text" id="password" placeholder="password" >
+            <img src="copy.png" onclick="copyPassword()" />
+        </div>
+        <button onclick="createPassword()" id="button">
+            <img src="generate.png">Generate Password</button>
+    </Div>
+
+    <script>
+        const passwordBox = document.getElementById("password");
+        const len = 12;
+
+        const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+        const number = "0123456789";
+        const symbols = "!@#$%^&*()_-+=<>?/{}[]|";
+        const allChars = upperCase + lowerCase + number + symbols;
+
+       function createPassword(){
+        let password ="";
+        password += upperCase[Math.floor(Math.random()*upperCase.length)];
+        password += lowerCase[Math.floor(Math.random()*lowerCase.length)];
+        password += number[Math.floor(Math.random()*number.length)];
+        password += symbols[Math.floor(Math.random()*symbols.length)];
+
+        while(len>password.length){
+            password += allChars[Math.floor(Math.random()*allChars.length)]
+        }
+        passwordBox.value = password;
+       }
+
+
+       function copyPassword(){
+        passwordBox.select();
+        document.execCommand("copy");
+       }
+    </script>
+</body>
+</html>
